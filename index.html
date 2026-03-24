@@ -189,3 +189,114 @@
     </ul>
     <a class="btn" href="https://booking.com/?aid=1858279">Explore More Deals Now</a>
 </section>
+<section id="legal">
+    <h2>Legal Information</h2>
+    <p>Booking.com is an affiliate partner of this site. By booking through our links, you support the maintenance of this site, at no additional cost to you. We only promote services we trust and have personally used.</p>
+    <p>All prices shown on Booking.com are subject to change, depending on availability and local laws.</p>
+</section>
+
+<section id="privacy-policy">
+    <h2>Privacy Policy</h2>
+    <p>Your privacy is important to us. This website does not collect any personal information unless you actively provide it. Your information will never be sold or shared with third parties, except for Booking.com when making a booking. By using this website, you agree to our terms and conditions.</p>
+    <a href="https://www.booking.com/help" target="_blank">Visit Booking.com Help Center</a>
+</section>
+
+<footer>
+    <p>&copy; <script>document.write(new Date().getFullYear());</script> Your Website Name. All Rights Reserved.</p>
+    <p><a href="#legal">Legal Information</a> | <a href="#privacy-policy">Privacy Policy</a> | <a href="#contact">Contact</a></p>
+</footer>
+
+<!-- Return Flow: When user leaves, provide a seamless way back to the site -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const returnButton = document.createElement("button");
+        returnButton.innerText = "Return to Our Site";
+        returnButton.style.position = "fixed";
+        returnButton.style.bottom = "20px";
+        returnButton.style.left = "20px";
+        returnButton.style.padding = "10px 20px";
+        returnButton.style.backgroundColor = "#ff4d4d";
+        returnButton.style.color = "white";
+        returnButton.style.border = "none";
+        returnButton.style.borderRadius = "5px";
+        returnButton.style.fontSize = "16px";
+        returnButton.style.cursor = "pointer";
+
+        returnButton.onclick = function() {
+            window.location.href = "https://brightlane.github.io/EventTicketMastery/"; // Your site's URL
+        };
+
+        document.body.appendChild(returnButton);
+    });
+</script>
+
+<!-- Social Meta Tags for Facebook, Twitter, and Other Social Platforms -->
+<meta property="og:title" content="Best Travel Deals & Hotels | Booking.com">
+<meta property="og:description" content="Find unbeatable travel deals on Booking.com: Hotels, Flights, Vacation Packages, and Experiences worldwide.">
+<meta property="og:image" content="images/booking-thumbnail.jpg">
+<meta property="og:url" content="https://brightlane.github.io/EventTicketMastery/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Best Travel Deals & Hotels | Booking.com">
+<meta name="twitter:description" content="Find unbeatable travel deals on Booking.com: Hotels, Flights, Vacation Packages, and Experiences worldwide.">
+<meta name="twitter:image" content="images/booking-thumbnail.jpg">
+
+<!-- Structured Data: Breadcrumbs for Rich Results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://brightlane.github.io/EventTicketMastery/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Deals",
+      "item": "https://brightlane.github.io/EventTicketMastery/#deals"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Booking.com",
+      "item": "https://brightlane.github.io/EventTicketMastery/#booking"
+    }
+  ]
+}
+</script>
+
+<!-- Minified CSS & JS for Speed Optimization -->
+<style>
+    body { font-family: Arial, sans-serif; margin: 0; line-height: 1.7; color: #333; }
+    header { background: #111; color: white; padding: 50px 20px; text-align: center; }
+    header h1 { font-size: 3em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; margin-top: 0; }
+    nav { position: sticky; top: 0; background: #222; color: white; padding: 10px; text-align: center; z-index: 999; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    section { padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
+    section h2 { font-size: 2.5em; margin-bottom: 20px; }
+    a.btn { background: #ff4d4d; color: white; padding: 15px 30px; display: inline-block; text-decoration: none; border-radius: 5px; }
+    a.btn:hover { background: #fa8231; transition: 0.3s; }
+    footer { background: #f9f9f9; padding: 30px; font-size: 14px; text-align: center; }
+    footer p { margin: 5px 0; }
+    img { max-width: 100%; height: auto; }
+    figcaption { font-size: 0.9em; color: #555; margin-top: 10px; text-align: center; }
+</style>
+
+<script>
+    // Ensure all external resources are loaded quickly
+    window.addEventListener('load', function () {
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js';
+        script.defer = true;
+        document.body.appendChild(script);
+    });
+</script>
+
+</body>
+</html>
