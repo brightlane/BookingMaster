@@ -12,15 +12,15 @@
         * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
         body { background: var(--bg); color: #1a1a1a; }
 
-        /* URGENCY BAR */
-        .ticker { background: var(--accent); color: white; text-align: center; padding: 8px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        /* URGENCY TICKER */
+        .ticker { background: var(--accent); color: white; text-align: center; padding: 10px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* NAV */
+        /* NAVIGATION */
         nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e7ebee; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .logo { font-weight: 900; color: var(--b-blue); text-decoration: none; font-size: 1.4rem; }
         .nav-links a { margin-left: 20px; text-decoration: none; color: var(--b-blue); font-weight: 700; font-size: 0.85rem; }
 
-        /* HERO */
+        /* HERO SECTION */
         header { 
             background: linear-gradient(rgba(0,53,128,0.85), rgba(0,53,128,0.95)), url('https://images.unsplash.com/photo-1504450758481-7338eba7524a?auto=format&fit=crop&w=1920&q=80');
             background-size: cover; background-position: center;
@@ -29,7 +29,7 @@
         header h1 { font-size: 3.5rem; margin-bottom: 15px; font-weight: 900; line-height: 1.1; }
         header p { max-width: 700px; margin: 0 auto 30px; font-size: 1.2rem; opacity: 0.9; }
 
-        /* CONVERSION STRIP */
+        /* MULTI-CHANNEL CONVERSION BUNDLE */
         .bundle-card { background: white; border-radius: 15px; margin: -50px auto 60px; max-width: 1000px; padding: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.15); border: 1px solid #eee; }
         .bundle-step { text-align: center; padding: 10px; }
         .bundle-step h4 { font-size: 0.7rem; color: #8898aa; text-transform: uppercase; margin-bottom: 10px; }
@@ -41,133 +41,120 @@
 
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        /* STATUS BADGES */
+        /* CONTENT CARDS */
+        .card-box { background: white; border-radius: 16px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); margin-bottom: 60px; }
         .badge { display: inline-block; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; margin-bottom: 5px; }
-        .status-low { background: #e6ffed; color: #22863a; }
         .status-high { background: #fff5f5; color: var(--accent); }
 
-        /* TABLE STYLING */
-        .card-box { background: white; border-radius: 16px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); margin-bottom: 60px; }
+        /* TABLE */
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th { text-align: left; padding: 15px; border-bottom: 2px solid #f1f4f8; color: #8898aa; font-size: 0.75rem; text-transform: uppercase; }
         td { padding: 20px 15px; border-bottom: 1px solid #f1f4f8; font-weight: 600; vertical-align: middle; }
 
         /* ALIEXPRESS GEAR SECTION */
         .gear-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
-        .gear-card { background: #fff; border: 1px solid #eef2f7; border-radius: 12px; padding: 25px; text-align: center; transition: 0.3s; }
-        .gear-card:hover { border-color: var(--ali-orange); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .gear-card { background: #fff; border: 1px solid #eef2f7; border-radius: 12px; padding: 25px; text-align: center; transition: 0.3s; border-top: 4px solid var(--ali-orange); }
         .ali-cta { background: var(--ali-orange); color: white; padding: 12px 25px; text-decoration: none; border-radius: 6px; font-weight: 800; display: inline-block; margin-top: 15px; width: 100%; }
 
         /* FOOTER */
         footer { background: var(--b-blue); color: white; padding: 80px 20px; text-align: center; margin-top: 100px; }
         .footer-links a { color: var(--gold); text-decoration: none; margin: 0 15px; font-size: 0.8rem; font-weight: bold; }
-        .disclosure { font-size: 0.7rem; opacity: 0.6; max-width: 600px; margin: 30px auto; line-height: 1.4; }
+        .disclosure { font-size: 0.7rem; opacity: 0.6; max-width: 700px; margin: 30px auto; line-height: 1.6; }
     </style>
 </head>
 <body>
 
-    <div class="ticker">⚠️ Warning: 2026 World Cup Housing Inventory is 65% Reserved in LA and NYC</div>
+    <div class="ticker">⚠️ NOTICE: 2026 WORLD CUP HOTEL INVENTORY IS 70% RESERVED IN KEY HOST CITIES</div>
 
     <nav>
-        <a href="index.html" class="logo">2026 EVENT MASTERY</a>
+        <a href="index.html" class="logo">2026 TRAVEL MASTERY</a>
         <div class="nav-links">
-            <a href="calendar.html">CALENDAR</a>
+            <a href="calendar.html">EVENT CALENDAR</a>
             <a href="https://www.booking.com/?aid=1858279" rel="nofollow">DAILY DEALS</a>
         </div>
     </nav>
 
     <header>
-        <div class="hero-tag">STAYS • FLIGHTS • TICKETS • GEAR</div>
-        <h1>Your 2026 Command Center</h1>
-        <p>Expert-verified logistics for the 2026 World Cup and Global Tours. We track proximity, pricing, and security compliance so you don't have to.</p>
-        <a href="https://www.booking.com/?aid=1858279" class="bundle-link link-booking" style="display:inline-block; padding: 18px 45px;">Secure Your Stay on Booking.com</a>
+        <div class="hero-tag" style="background:var(--gold); color:black; display:inline-block; padding:5px 15px; border-radius:50px; font-weight:900; font-size:0.7rem; margin-bottom:20px;">100% VETTED LOGISTICS</div>
+        <h1>Master Your 2026 Journey</h1>
+        <p>Direct access to Booking.com inventory synced with 2026 global event hubs. Don't just find a room—secure your strategy.</p>
+        <a href="https://www.booking.com/?aid=1858279" class="bundle-link link-booking" style="display:inline-block; padding: 18px 45px; font-size:1.1rem;">Search Stays on Booking.com</a>
     </header>
 
     <div class="container">
         
-        <!-- TRIP BUNDLE STRIP -->
+        <!-- THE CONVERSION ENGINE: STEP-BY-STEP BUNDLE -->
         <div class="bundle-card">
             <div class="bundle-step">
-                <h4>Step 1: The Access</h4>
+                <h4>1. The Access</h4>
                 <a href="https://stubhub.prf.hn/click/camref:1100l5mzXr" class="bundle-link link-stubhub" target="_blank">Tickets on StubHub</a>
             </div>
             <div class="bundle-step">
-                <h4>Step 2: The Route</h4>
+                <h4>2. The Route</h4>
                 <a href="https://skyscanner.pxf.io/c/21885/..." class="bundle-link link-skyscanner" target="_blank">Flights on Skyscanner</a>
             </div>
             <div class="bundle-step">
-                <h4>Step 3: The Stays</h4>
+                <h4>3. The Home Base</h4>
                 <a href="https://www.booking.com/?aid=1858279" class="bundle-link link-booking" target="_blank">Hotels on Booking.com</a>
             </div>
         </div>
 
-        <!-- MAIN DATA TABLE -->
+        <!-- STAYS TABLE -->
         <div class="card-box">
-            <h2>Vetted 2026 Event Locations</h2>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h2>Vetted Host City Stays</h2>
+                <a href="calendar.html" style="font-size:0.8rem; color:var(--b-light); font-weight:bold;">View Full 2026 Calendar →</a>
+            </div>
             <table>
                 <thead>
                     <tr>
-                        <th>Destination</th>
-                        <th>2026 Event Status</th>
-                        <th>Recommended Logistics</th>
+                        <th>Host Destination</th>
+                        <th>Availability Status</th>
+                        <th>Travel Sync</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>
-                            <strong>Los Angeles</strong><br>
-                            <span style="font-size:0.75rem; color:#666;">SoFi Stadium Area</span>
-                        </td>
-                        <td>
-                            <span class="badge status-high">CRITICAL DEMAND</span><br>
-                            <span style="font-size:0.75rem;">Prices rising 12% monthly</span>
-                        </td>
-                        <td>
-                            <a href="https://skyscanner.pxf.io/c/21885/..." style="font-size:0.8rem; color:var(--b-light); text-decoration:none;">Check LAX Airfare</a><br>
-                            <a href="https://www.booking.com/?aid=1858279" style="font-size:0.8rem; color:var(--b-blue); text-decoration:none;">View 5-Mile Radius Hotels</a>
-                        </td>
+                        <td><strong>Los Angeles (SoFi Hub)</strong></td>
+                        <td><span class="badge status-high">LOW INVENTORY</span></td>
+                        <td><a href="https://www.booking.com/?aid=1858279" style="color:var(--b-blue);">🏨 Book SoFi Radius</a></td>
                     </tr>
                     <tr>
-                        <td>
-                            <strong>Mexico City</strong><br>
-                            <span style="font-size:0.75rem; color:#666;">Estadio Azteca Area</span>
-                        </td>
-                        <td>
-                            <span class="badge status-low">EARLY BIRD OPEN</span><br>
-                            <span style="font-size:0.75rem;">Flexible rates available</span>
-                        </td>
-                        <td>
-                            <a href="https://skyscanner.pxf.io/c/21885/..." style="font-size:0.8rem; color:var(--b-light); text-decoration:none;">Check MEX Airfare</a><br>
-                            <a href="https://www.booking.com/?aid=1858279" style="font-size:0.8rem; color:var(--b-blue); text-decoration:none;">View Best Rated Stays</a>
-                        </td>
+                        <td><strong>New York / New Jersey</strong></td>
+                        <td><span class="badge status-high">PRICE SURGE ALERT</span></td>
+                        <td><a href="https://www.booking.com/?aid=1858279" style="color:var(--b-blue);">🏨 Book MetLife Radius</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mexico City (Azteca)</strong></td>
+                        <td><span class="badge" style="background:#e6ffed; color:#22863a;">EARLY BIRD OPEN</span></td>
+                        <td><a href="https://www.booking.com/?aid=1858279" style="color:var(--b-blue);">🏨 Book CDMX Stays</a></td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <!-- ALIEXPRESS COMPLIANCE SECTION -->
+        <!-- ALIEXPRESS COMPLIANCE WIDGET -->
         <div id="gear" style="margin-top: 60px;">
-            <div style="display:flex; align-items:center; gap:10px;">
-                <h2 style="color: var(--ali-orange);">🎒 Required Stadium Gear</h2>
-                <span class="badge" style="background:#000; color:#fff;">SECURITY COMPLIANT</span>
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h2 style="color: var(--ali-orange); font-size: 2rem;">Essential Event Gear</h2>
+                <p>2026 Stadiums require specific security compliance. Get yours from AliExpress.</p>
             </div>
-            <p style="color:#666;">Don't get turned away. 2026 venues enforce strict clear-bag and power-bank policies.</p>
             
             <div class="gear-grid">
                 <div class="gear-card">
-                    <h3>Stadium Clear Bag</h3>
-                    <p style="font-size:0.8rem; color:#8898aa;">Standard 12x6x12 Compliance</p>
+                    <h3>Clear Stadium Bag</h3>
+                    <p style="font-size:0.8rem; color:#666; margin:10px 0;">Mandatory for NFL & World Cup Stadiums (12x6x12)</p>
                     <a href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" class="ali-cta" target="_blank">Shop on AliExpress</a>
                 </div>
                 <div class="gear-card">
-                    <h3>Fast-Charge Power Bank</h3>
-                    <p style="font-size:0.8rem; color:#8898aa;">TSA & Stadium Approved</p>
-                    <a href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" class="ali-cta" target="_blank">View Gear Deal</a>
+                    <h3>Universal Travel Adapter</h3>
+                    <p style="font-size:0.8rem; color:#666; margin:10px 0;">Fast-charging GaN technology for global event tours.</p>
+                    <a href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" class="ali-cta" target="_blank">Check Price</a>
                 </div>
                 <div class="gear-card">
-                    <h3>Universal Adapter</h3>
-                    <p style="font-size:0.8rem; color:#8898aa;">Essential for Global 2026 Travel</p>
-                    <a href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" class="ali-cta" target="_blank">View Gear Deal</a>
+                    <h3>High-Cap Power Bank</h3>
+                    <p style="font-size:0.8rem; color:#666; margin:10px 0;">TSA-approved battery for long days at the venue.</p>
+                    <a href="https://www.awin1.com/cread.php?awinmid=6378&awinaffid=1166692" class="ali-cta" target="_blank">View Deals</a>
                 </div>
             </div>
         </div>
@@ -176,14 +163,14 @@
 
     <footer>
         <div class="footer-links">
-            <a href="calendar.html">EVENT CALENDAR</a>
-            <a href="https://www.booking.com/?aid=1858279">STAYS</a>
-            <a href="https://stubhub.prf.hn/click/camref:1100l5mzXr">TICKETS</a>
+            <a href="calendar.html">2026 CALENDAR</a>
+            <a href="https://www.booking.com/?aid=1858279">BOOKING.COM</a>
+            <a href="https://skyscanner.pxf.io/c/21885/...">SKYSCANNER</a>
         </div>
         <p class="disclosure">
-            <strong>Affiliate Disclosure:</strong> As an expert travel guide, we use affiliate links to sustain our 2026 data research. When you book a hotel via Booking.com, buy tickets via StubHub, or gear via AliExpress through our links, we may earn a commission. This helps us keep this command center free for all fans.
+            <strong>Affiliate Transparency:</strong> This hub is supported by our readers. When you purchase via our Skyscanner, StubHub, Booking.com, or AliExpress links, we may earn a commission at no extra cost to you. This keeps our 2026 logistics data free for all fans.
         </p>
-        <p style="opacity:0.5; font-size:0.7rem;">&copy; 2026 Event Ticket Mastery. Partner IDs: 1858279 / 1100l5mzXr / 21885 / 1166692</p>
+        <p style="opacity:0.5; font-size:0.7rem; margin-top:20px;">Partner IDs: 1858279 | 1100l5mzXr | 21885 | 1166692</p>
     </footer>
 
 </body>
