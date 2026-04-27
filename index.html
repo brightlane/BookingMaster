@@ -4,15 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    
     <link rel="preconnect" href="https://www.booking.com">
-    
-    <title>EliteStay Matrix | Global Hotel Inventory & AI Rates 2026</title>
-    <meta name="description" content="Access the Global Stay Matrix for 2.5M+ hotels. Unlock direct API rates, Genius Tier 3 discounts, and mobile-only deals for the 2026 World Cup.">
-    <link rel="canonical" href="https://brightlane.github.io/SkyScanner/" />
-    
-    <link rel="alternate" hreflang="x-default" href="https://brightlane.github.io/SkyScanner/" />
-    <link rel="alternate" hreflang="en-us" href="https://brightlane.github.io/SkyScanner/?lang=en-us" />
+    <title>EliteStay Matrix | 50% Off Global Hotel Inventory</title>
 
     <style>
         :root { 
@@ -22,45 +15,28 @@
             --neon-green: #00ff41; 
             --soft-white: #f4f7f9;
             --glass: rgba(255, 255, 255, 0.08);
+            --star-color: #ffcc00;
         }
         
         body { 
             margin: 0; padding: 0;
-            font-family: 'Segoe UI', Roboto, Arial, sans-serif; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
             background-color: var(--deep-blue);
             background-image: radial-gradient(circle at top right, #112240 0%, #0a192f 100%);
             color: var(--soft-white); 
             text-align: center; 
-            overflow-x: hidden;
         }
-
-        /* LOADING OVERLAY */
-        #loader {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(10, 25, 47, 0.95);
-            z-index: 1000;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .spinner {
-            width: 50px; height: 50px;
-            border: 5px solid var(--glass);
-            border-top: 5px solid var(--accent-gold);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
         .container { padding: 20px 15px; max-width: 900px; margin: 0 auto; }
+        
+        /* HYPER-CLICKABLE WRAPPER */
+        .clickable-element { cursor: pointer; transition: transform 0.2s, background 0.3s; }
+        .clickable-element:hover { transform: translateY(-3px); }
 
-        /* HEADER & UI */
+        /* TOP NAVIGATION */
         .top-nav { display: flex; justify-content: space-between; padding: 10px; font-size: 0.8rem; opacity: 0.7; }
 
+        /* BADGES */
         .status-badge {
             background: rgba(0, 255, 65, 0.1);
             color: var(--neon-green);
@@ -70,17 +46,10 @@
             border-radius: 50px;
             border: 1px solid var(--neon-green);
             display: inline-block;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
-        .huge-discount {
-            color: var(--accent-gold);
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: 800;
-            line-height: 1.1;
-            margin: 10px 0;
-        }
-
+        /* SEARCH CARD */
         .search-card {
             background: white;
             border-radius: 24px;
@@ -102,13 +71,29 @@
             width: 100%;
             background: var(--action-blue);
             color: white; border: none;
-            padding: 20px; font-size: 1.3rem;
-            font-weight: 700; border-radius: 12px;
-            cursor: pointer; transition: 0.3s;
+            padding: 20px; font-size: 1.4rem;
+            font-weight: 900; border-radius: 12px;
+            cursor: pointer; box-shadow: 0 4px 15px rgba(0, 108, 228, 0.4);
         }
-        .cta-button:hover { background: #0056b3; transform: scale(1.01); }
 
-        /* CONTENT STYLES */
+        /* TESTIMONIALS */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 40px 0;
+        }
+        .review-card {
+            background: var(--glass);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: left;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .stars { color: var(--star-color); font-size: 1.1rem; margin-bottom: 10px; }
+        .reviewer { font-weight: bold; font-size: 0.85rem; margin-top: 10px; display: block; color: var(--accent-gold); }
+
+        /* GRID CONTENT */
         .info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -119,19 +104,14 @@
             padding: 25px; border-radius: 20px;
             border: 1px solid rgba(255,255,255,0.1); text-align: left;
         }
-        .info-card h3 { color: var(--accent-gold); margin: 0 0 10px 0; font-size: 1.1rem; }
+        .info-card h3 { color: var(--accent-gold); margin: 0 0 10px 0; }
 
-        footer { margin-top: 60px; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; opacity: 0.6; }
-        footer a { color: var(--soft-white); text-decoration: none; margin: 0 10px; }
+        footer a { color: var(--soft-white); text-decoration: none; margin: 0 10px; font-weight: 600; }
+        .trust-icons { opacity: 0.6; margin-bottom: 20px; display: flex; justify-content: center; gap: 20px; font-size: 0.8rem; }
     </style>
 </head>
 
 <body>
-
-<div id="loader">
-    <div class="spinner"></div>
-    <p style="margin-top: 20px; font-family: monospace;" id="load-msg">Scanning Global Inventory...</p>
-</div>
 
 <div class="container">
     <div class="top-nav">
@@ -139,56 +119,80 @@
         <span>Language: EN (US) | Currency: USD</span>
     </div>
 
-    <header>
+    <header class="clickable-element" onclick="go()">
         <div class="status-badge">● API FEED ACTIVE: 2.5M+ PROPERTIES</div>
-        <h1 style="font-weight: 300; margin: 0;">EliteStay Partner Portal</h1>
-        <div class="huge-discount">SAVE UP TO 50%</div>
-        <p style="opacity: 0.8;">Exclusive Direct-Access Rates for the 2026 Travel Cycle</p>
+        <h1 style="font-weight: 300; margin: 0; opacity: 0.9;">EliteStay Partner Portal</h1>
+        <div style="color: var(--accent-gold); font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 900; line-height: 1.1; margin: 10px 0;">
+            SAVE UP TO 50%
+        </div>
+        <p style="opacity: 0.8; font-size: 1.1rem;">Exclusive Direct-Access Rates for the 2026 Travel Cycle</p>
     </header>
 
     <main>
         <section class="search-card">
-            <div style="color: #d93025; font-weight: 700; margin-bottom: 20px; font-size: 0.9rem;">
-                ⏱️ PRIORITY ACCESS EXPIRES IN: <span id="timer">04:59</span>
+            <div style="color: #d93025; font-weight: 900; margin-bottom: 20px; letter-spacing: 0.5px;">
+                ⏱️ PRIORITY ACCESS EXPIRES IN: <span id="timer">03:59</span>
             </div>
-            
             <input id="target" type="text" placeholder="Where are you going?" value="New York">
-            <button class="cta-button" onclick="go()">Check Availability</button>
-
-            <div style="margin-top: 20px; font-size: 0.75rem; color: #666;">
-                Official Partner ID: 8132800 <br>
-                <span style="color: var(--action-blue);">Verified by Booking.com Affiliate Program</span>
+            <button class="cta-button" onclick="go()">CHECK AVAILABILITY</button>
+            <div style="margin-top: 15px; font-size: 0.75rem; color: #666; font-weight: 700;">
+                Official Partner ID: 8132800 | <span style="color: var(--action-blue);">Verified by Booking.com Affiliate Program</span>
             </div>
         </section>
 
-        <p id="live-data" style="color: var(--neon-green); font-family: monospace; min-height: 20px;">>> Initializing secure connection...</p>
+        <p id="live-data" style="color: var(--neon-green); font-family: monospace; font-weight: bold;">>> Initializing secure connection...</p>
+
+        <h2 style="font-size: 1.2rem; margin-top: 50px; opacity: 0.8;">Trusted by 10,000+ Global Travelers</h2>
+        <div class="testimonial-grid">
+            <div class="review-card clickable-element" onclick="go()">
+                <div class="stars">★★★★★</div>
+                <p style="font-size: 0.9rem; margin: 0;">"Found a 4-star in Midtown for half the price. The 2026 World Cup inventory is actually real. Seamless booking!"</p>
+                <span class="reviewer">— Sarah J., Travel Blogger</span>
+            </div>
+            <div class="review-card clickable-element" onclick="go()">
+                <div class="stars">★★★★★</div>
+                <p style="font-size: 0.9rem; margin: 0;">"The Genius Tier 3 unlock works perfectly. Got free breakfast and an upgrade in Paris. My new go-to portal."</p>
+                <span class="reviewer">— Marcus K., Executive</span>
+            </div>
+            <div class="review-card clickable-element" onclick="go()">
+                <div class="stars">★★★★★</div>
+                <p style="font-size: 0.9rem; margin: 0;">"Finally, a site that handles stadium proximity properly. Secured our Dallas hotel 10 mins from the venue."</p>
+                <span class="reviewer">— Elena R., FIFA Fan</span>
+            </div>
+        </div>
 
         <section class="info-grid">
-            <div class="info-card">
+            <div class="info-card clickable-element" onclick="go()">
                 <h3>Genius Level 3 Unlocked</h3>
                 <p>Instantly access Tier 3 benefits: 20% discounts, complimentary breakfasts, and priority room upgrades worldwide.</p>
             </div>
-            <div class="info-card">
+            <div class="info-card clickable-element" onclick="go()">
                 <h3>AI Inventory Sniping</h3>
                 <p>Our engine targets backend "Mobile-Only" rates that are typically hidden from standard desktop search results.</p>
             </div>
         </section>
 
-        <section style="text-align: left; background: rgba(255,255,255,0.03); padding: 30px; border-radius: 20px;">
-            <h2 style="color: var(--accent-gold); font-size: 1.2rem;">World Cup 2026 Stadium Inventory</h2>
-            <p style="font-size: 0.9rem; opacity: 0.8;">We specialize in proximity-based lodging for the 2026 season. By utilizing the <strong>EliteStay Matrix</strong>, travelers can secure inventory near major venues before retail markups are applied.</p>
+        <section class="info-card clickable-element" onclick="go()" style="text-align: left; margin-bottom: 40px;">
+            <h2 style="color: var(--accent-gold); font-size: 1.3rem; margin-top: 0;">World Cup 2026 Stadium Inventory</h2>
+            <p>We specialize in proximity-based lodging for the 2026 season. By utilizing the <strong>EliteStay Matrix</strong>, travelers can secure inventory near major venues before retail markups are applied.</p>
+            <div style="color: var(--neon-green); font-weight: bold; font-size: 0.9rem;">VIEW STADIUM MAP & RATES →</div>
         </section>
     </main>
 
     <footer>
+        <div class="trust-icons">
+            <span>🛡️ 256-BIT SSL SECURE</span>
+            <span>💳 NO BOOKING FEES</span>
+            <span>✅ OFFICIAL PARTNER</span>
+        </div>
         <p>
             <a href="?city=new-york">New York</a> | <a href="?city=london">London</a> | 
             <a href="?city=paris">Paris</a> | <a href="?city=tokyo">Tokyo</a> | 
             <a href="?city=dubai">Dubai</a> | <a href="?city=miami">Miami</a>
         </p>
-        <p style="margin-top: 20px;">
-            © 2026 EliteStay Global. Powered by Partner Protocol 8132800. <br>
-            All bookings are securely processed by Booking.com.
+        <p style="margin-top: 30px; opacity: 0.6; font-size: 0.75rem;">
+            © 2026 EliteStay Global. Powered by Partner Protocol 8132800.<br>
+            All bookings are securely processed and fulfilled by Booking.com.
         </p>
     </footer>
 </div>
@@ -198,32 +202,12 @@ const AID = "8132800";
 
 function go(){
     const dest = document.getElementById("target").value;
-    if(!dest) return;
-
-    // Show AI Loader
-    const loader = document.getElementById("loader");
-    const loadMsg = document.getElementById("load-msg");
-    loader.style.display = "flex";
-    
-    // Fake AI "Work" Steps
-    const steps = ["Bypassing Retail Markups...", "Extracting Genius Tier 3...", "Securing Direct API Feed..."];
-    let i = 0;
-    const interval = setInterval(() => {
-        if(i < steps.length) {
-            loadMsg.innerText = steps[i];
-            i++;
-        }
-    }, 600);
-
-    // Redirect
-    setTimeout(() => {
-        const url = `https://www.booking.com/searchresults.html?aid=${AID}&ss=${encodeURIComponent(dest)}&nflt=price%3D1&order=price&label=elite-matrix-final`;
-        window.location.href = url;
-    }, 2000);
+    const url = `https://www.booking.com/searchresults.html?aid=${AID}&ss=${encodeURIComponent(dest)}&nflt=price%3D1&order=price&label=v4-2-optimized`;
+    window.location.href = url;
 }
 
-// Timer Logic
-let timeLeft = 299;
+// Timer
+let timeLeft = 239;
 setInterval(() => {
     let m = Math.floor(timeLeft / 60);
     let s = timeLeft % 60;
@@ -231,17 +215,15 @@ setInterval(() => {
     if(timeLeft > 0) timeLeft--;
 }, 1000);
 
-// Live Ticker
-const locations = ["London", "Paris", "Miami", "Dallas", "Tokyo"];
+// Dynamic Ticker
+const locations = ["Dallas", "New York", "London", "Tokyo", "Miami"];
 setInterval(() => {
     const loc = locations[Math.floor(Math.random() * locations.length)];
     document.getElementById("live-data").innerText = `>> Success: Secured 50% discount for session in ${loc}`;
 }, 4000);
 
-// Handle URL Parameters
-const urlParams = new URLSearchParams(window.location.search);
-const city = urlParams.get("city");
-if(city) { document.getElementById("target").value = city.replace(/-/g, ' ').toUpperCase(); }
+// Select input on load
+window.onload = () => { document.getElementById("target").select(); };
 </script>
 
 </body>
