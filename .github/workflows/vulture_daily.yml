@@ -1,0 +1,29 @@
+name: Vulture 10K Daily Automation
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs exactly at midnight
+  workflow_dispatch: # Allows you to click "Run" manually
+
+jobs:
+  update_inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run Vulture Engine
+        run: python vulture_engine.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "Vulture-Bot"
+          git config --global user.email "bot@bookingmaster.io"
+          git add inventory.json
+          git commit -m "Vulture 10K: Daily Inventory Sweep [$(date)]" || echo "No changes"
+          git push
