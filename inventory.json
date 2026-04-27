@@ -1,30 +1,41 @@
 {
-    "last_updated": "2026-04-27 17:35:07",
-    "featured_deals": [
+    "sync_time": "April 27, 2026",
+    "timestamp": "2026-04-27T17:38:48.079716",
+    "deals": [
         {
-            "city": "Las Vegas",
-            "discount": 40,
-            "active_users": 10
+            "location": "Miami",
+            "venue": "Hard Rock Stadium",
+            "saving": "35%",
+            "urgency": "Only 7 rooms left at this rate",
+            "headline": "2026 Inventory Alert: Miami Stays Near Hard Rock Stadium"
         },
         {
-            "city": "Miami",
-            "discount": 50,
-            "active_users": 49
+            "location": "Los Angeles",
+            "venue": "SoFi Stadium",
+            "saving": "55%",
+            "urgency": "Only 6 rooms left at this rate",
+            "headline": "2026 Inventory Alert: Los Angeles Stays Near SoFi Stadium"
         },
         {
-            "city": "Rome",
-            "discount": 40,
-            "active_users": 76
+            "location": "New York",
+            "venue": "MetLife Stadium",
+            "saving": "40%",
+            "urgency": "Only 8 rooms left at this rate",
+            "headline": "2026 Inventory Alert: New York Stays Near MetLife Stadium"
         },
         {
-            "city": "Paris",
-            "discount": 50,
-            "active_users": 59
+            "location": "Dallas",
+            "venue": "AT&T Stadium",
+            "saving": "40%",
+            "urgency": "Only 3 rooms left at this rate",
+            "headline": "2026 Inventory Alert: Dallas Stays Near AT&T Stadium"
         },
         {
-            "city": "Tokyo",
-            "discount": 50,
-            "active_users": 58
+            "location": "Mexico City",
+            "venue": "Estadio Azteca",
+            "saving": "40%",
+            "urgency": "Only 2 rooms left at this rate",
+            "headline": "2026 Inventory Alert: Mexico City Stays Near Estadio Azteca"
         }
     ]
 }
